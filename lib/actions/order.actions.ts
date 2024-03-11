@@ -16,7 +16,6 @@ export const checkoutOrder = async (order: CheckoutOrderParams) => {
     const session = await stripe.checkout.sessions.create({
       line_items: [
         {
-          // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
           price_data: {
             currency: "usd",
             unit_amount: price,
